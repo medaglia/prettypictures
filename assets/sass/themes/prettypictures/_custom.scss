@@ -1,0 +1,196 @@
+// Show navbar only after scroll on mobile
+// nav {
+//   @media (max-width: $mobile-breakpoint) {
+//     opacity: 0;
+//   }
+// }
+
+// If using background, attach it on mobile devices to increase performance (down-side: no parallax effect anymore)
+// @media (max-width: $mobile-breakpoint) {
+//   .bg {
+//     background-attachment: scroll;
+//   }
+// }
+
+// Home logo animation as soon as page loads
+// .home-logo {
+//   animation: scale-in-center .8s cubic-bezier(.25, .46, .45, .94) both;
+// }
+
+@import 'fontface';
+@import 'colors';
+
+header {
+  min-height: auto;
+  height: auto;
+  h1,
+  h2,
+  h3 {
+    font-family: $font-tagline;
+  }
+}
+
+input[type='submit'],
+button,
+select {
+  text-transform: uppercase;
+}
+
+.center-xs,
+.center-sm,
+.center-md,
+.center-lg {
+  p {
+    text-align: left; // fixes some alignment issues
+  }
+}
+
+// Specific elements ----------------------------------------------------------
+
+nav {
+  h1,
+  h3 {
+    font-family: 'Roboto-Slim', serif;
+    font-size: large;
+    letter-spacing: 2px;
+    line-height: 1.45;
+    a {
+      text-decoration: none;
+    }
+    margin-bottom: 0;
+  }
+  h1 {
+    margin-right: 2rem;
+  }
+  h3 {
+    margin: 0 1rem;
+  }
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: $mobile-breakpoint) {
+  nav {
+    // Hide menu links between logo and menu icon
+    div:not(:first-child):not(:last-child) {
+      display: initial;
+    }
+    h3 {
+      font-size: medium;
+    }
+    h1 {
+      margin-right: 0;
+    }
+  }
+}
+
+.home-header {
+  margin-top: 0.75rem;
+  .col-xs-12 {
+    padding: 0;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 3rem;
+  }
+}
+
+.nav-fixed2 {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  z-index: 1000;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: $mobile-breakpoint) {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+  a.icon-active > .icon {
+    fill: $full-nav-bg-color;
+  }
+}
+
+.gallery .gallery-img-container img {
+  padding: 0;
+}
+.gallery .gallery-item {
+  background-color: $secondary-bg-color;
+  .overlay {
+    visibility: visible;
+    opacity: 0.6;
+    h2 {
+      text-transform: uppercase;
+      font-size: large;
+    }
+  }
+  &:hover .overlay {
+    opacity: 0.95;
+  }
+  &::after {
+    padding-bottom: 56.35%; // 16:9 aspect ratio
+  }
+}
+
+.about p {
+  @include size(p);
+}
+
+// Modal styles ---------------------------------------------------------------
+.modal-box {
+  width: 95%;
+  max-height: 90vh;
+  border-radius: 3px;
+  max-width: 945px;
+}
+.modal-container {
+  border-radius: inherit;
+}
+
+.modal-header {
+  border-radius: inherit;
+  height: 40vh;
+}
+
+.modal-content {
+  max-height: 90vh;
+  .meta-data {
+    font-size: medium;
+    margin: 0.75em 0 1.5em 0;
+  }
+}
+
+.close {
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  top: 0;
+  right: 0px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+  background: rgba(0, 9, 9, 0.5);
+
+  &:focus {
+    outline: solid 0 transparent;
+    box-shadow: 0 0 0 2px #8ed0f9;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 15%;
+    left: calc(1.25rem);
+    width: 0.05em;
+    height: 70%;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: '';
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

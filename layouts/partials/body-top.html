@@ -1,0 +1,21 @@
+{{ if .Site.Params.Feat.googleTagManager }}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.Feat.googleTagManager }}" height="0"
+        width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{{ end }}
+
+{{ if .IsHome }}
+{{ partial "sections/nav.html" . }}
+<header class="row middle-xs center-xs bg lazyload home-header">
+    <div class="col-xs-12">
+        {{ partial "sections/video.html" . }}
+    </div>
+</header>
+{{ end }}
+
+
+<!--
+<section class="nav-full row middle-xs center-xs">
+
+</section> -->

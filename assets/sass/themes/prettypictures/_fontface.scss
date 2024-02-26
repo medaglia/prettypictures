@@ -1,0 +1,15 @@
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto-Slim';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/roboto/roboto-v30-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+$font-header: 'Roboto-Slim', 'Bitter', 'Ubuntu', Georgia, serif;
+$font-body: 'Roboto-Slim', 'Rubic', 'Poppins', 'Helvetica', Arial, sans-serif;
+$font-code: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace;
+$font-tagline: $font-header;
+$nav-font: $font-body;

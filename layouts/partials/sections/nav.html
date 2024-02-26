@@ -1,0 +1,15 @@
+<nav class="row middle-xs center-xs nav-fixed2 nav-shadow">
+    <div class="col-sm-6">
+        <h1><a href="/">{{ .Site.Params.tagline | upper }}</a></h1>
+    </div>
+    <div class="col-sm-6 around-sm">
+        <div class="row">
+            {{ range .Site.Menus.main }}
+            <div class="col-sm-4 nav-item">
+                <h3><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></h3>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <div class="logo nav-icon nav-full" style="display: none;"></div>
+</nav>
