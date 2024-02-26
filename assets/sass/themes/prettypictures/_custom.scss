@@ -116,17 +116,21 @@ nav {
   background-color: $secondary-bg-color;
   .overlay {
     visibility: visible;
-    opacity: 0.6;
+    opacity: 0.65;
+    background-color: rgba(0, 0, 0, 0.5);
     h2 {
       text-transform: uppercase;
       font-size: large;
     }
   }
   &:hover .overlay {
-    opacity: 0.95;
+    opacity: 1;
   }
   &::after {
     padding-bottom: 56.35%; // 16:9 aspect ratio
+  }
+  &.hide-title h2 {
+    display: none;
   }
 }
 
@@ -140,6 +144,7 @@ nav {
   max-height: 90vh;
   border-radius: 3px;
   max-width: 945px;
+  margin: 2vh auto auto auto;
 }
 .modal-container {
   border-radius: inherit;

@@ -6,6 +6,7 @@ image: images/Ratsnitch-Angel.jpg
 genre: Narrative
 aspect: 16by9
 website:
+hide_title: true
 ---
 The Ratsnitch Angel is a disturbing tale about a boy who has an angel in his pocket. The film is presented using ‘1.5D’ technology. Viewers require special glasses to see it.
 
