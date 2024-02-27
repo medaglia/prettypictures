@@ -2,8 +2,8 @@
     <div class="col-sm-6">
         <h1><a href="/">{{ .Site.Params.tagline | upper }}</a></h1>
     </div>
-    <div class="col-sm-6 around-sm">
-        <div class="row">
+    <div class="col-sm-6">
+        <div class="row end-lg middle-sm">
             {{ range .Site.Menus.main }}
             <div class="col-sm-4 nav-item">
                 <h3><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></h3>

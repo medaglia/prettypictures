@@ -45,6 +45,40 @@ select {
   }
 }
 
+.end-xs {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.end-sm {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.end-md {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.end-lg {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.between-lg {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 // Specific elements ----------------------------------------------------------
 
 nav {
@@ -84,11 +118,11 @@ nav {
 }
 
 .home-header {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   .col-xs-12 {
     padding: 0;
   }
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: 38.4em) {
     margin-top: 3rem;
   }
 }
@@ -136,6 +170,12 @@ nav {
 
 .about p {
   @include size(p);
+}
+
+@media (max-width: $mobile-breakpoint) {
+  body .container {
+    padding: $vertical-rhythm * 2 $vertical-rhythm * 0.5 $vertical-rhythm * 0.5;
+  }
 }
 
 // Modal styles ---------------------------------------------------------------
