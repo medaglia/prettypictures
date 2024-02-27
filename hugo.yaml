@@ -18,7 +18,7 @@ module:
 ## Generic theme parameters:
 Params:
   author:
-    name: "Michael Medaglia"
+    name: "medaglia"
   description: "Writer, Director and Visual Storyteller"
 
   # logoBig appears at the top of the page. Use a path relative to the assets dir for auto-resizing.
@@ -32,7 +32,7 @@ Params:
   #background: "background.jpg"
 
   # opengraphImage specifies the image that is shown when previewing the site in a messenger or Google Search.
-  # opengraphImage: "/images/osprey-delight.png"
+  opengraphImage: "/images/prettypictures-opengraph.png"
 
   # favicon of the site (e.g. smaller version of logoSmall).
   favicon: "images/favicon-32x32.png"
